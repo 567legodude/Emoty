@@ -121,6 +121,10 @@ public class EmotyCommand extends BukkitCommand {
         data.addProperty(key, value);
     }
     
+    public void setData(String key, boolean value) {
+        data.addProperty(key, value);
+    }
+    
     public JsonObject getData() {
         return data;
     }

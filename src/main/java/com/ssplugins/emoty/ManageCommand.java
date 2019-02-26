@@ -158,7 +158,10 @@ public class ManageCommand implements CommandExecutor, TabCompleter {
                 }
                 if (option.equals("permission")) {
                     boolean enable = Boolean.parseBoolean(update);
-                    boolean updated = main.updateCommand(name, emotyCommand -> emotyCommand.setRequirePermission(enable));
+                    boolean updated = main.updateCommand(name, emotyCommand -> {
+                        emotyCommand.setRequirePermission(enable);
+                        emotyCommand.setData("requirePermission", enable);
+                    });
                     msgExists(updated, sender, "Command updated: " + name);
                     return true;
                 }
