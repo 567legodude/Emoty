@@ -1,0 +1,7 @@
+name: Emoty
+main: com.ssplugins.emoty.Emoty
+version: 1.0.0
+
+commands:
+  emoty:
+    description: Manage Emoty commands.
